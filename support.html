@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mobile Recharge,Postpaid,Prepaid,Payment,Network,Recharge">
+    <meta name="description" content="Online Mobile Recharge Portal">
+    <meta name="author" content="Sloth Bear">
+    <script type="text/javascript">
+      function abc() {
+                var m = document.getElementById("mail").value;
+                var u = document.getElementById("sub").value;
+                if(m.length==0 || u.length==0)
+                {
+                    window.alert("....Kindly fill all the required fields .... ");
+                }
+                else
+                {
+                    window.alert("We will reach out to you through mail in 24 hours");
+                    window.open("support.html");
+                }
+      }
+    </script>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        @font-face
+        {
+           font-family: Manrope_M;
+           src: url(Manrope-Medium.ttf)
+        }
+        #top_bar
+        {
+            background-color: #ff6600;
+            height:50px;
+        }
+        label
+        {
+            font-size: 20px;
+            font-family: Manrope_M;
+        }
+        input[type=text],textarea
+        {
+               border-radius:5px;
+               background-color: whitesmoke;
+               width: 100%;
+               padding: 12px 20px;
+               margin: 8px 0;
+               display: inline-block;
+               border: 1px solid #ccc;
+               box-sizing: border-box;
+        }
+        input:focus { outline:none; }   
+        #anim
+        {
+           float: right;
+           width: 600px;
+        }
+
+        #Form
+        {
+           margin-top:30px;
+           font-family: Manrope_M;
+           font-size: 20px;
+           margin-left:50px;
+           float:left;
+        }
+        .but 
+        {
+            color: white;
+            font-family: Manrope_M;
+            font-size: 25px;
+            background:  #ff6600;
+            border-radius:10px;
+            border-color: #ff6600;
+            padding:5px;
+            width:75%;
+            text-align: center;
+        }
+        .but:hover
+        {
+           background-color: antiquewhite;
+           color: #ff6600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top_bar">
+    </div>
+    <img src="images/supportgif.gif" id="anim" alt="supportanim" >
+    <div id="Form">
+    <p><b>We will reach out to you as soon as possible</b><br> -just address your concern to us</p>
+    <br><br>
+    <label for="email">Email Address:</label><input type="text" placeholder="Email or username" id="mail" 
+    name="email" required><br />
+    <label for="subject">Issue:</label><input type="text" placeholder="Short description of Your issue" id="sub"
+    name="subject" required><br />
+    <label for="description">Description:</label><br />
+    <textarea name="description" rows=20 cols=60 placeholder="Detailed description of your issue"></textarea><br>
+    <button type="button" onclick="abc()" class="but" id="send">send</button><br />
+    </div>
+</body>
+</html>
