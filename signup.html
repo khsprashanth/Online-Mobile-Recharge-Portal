@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Mobile Recharge,Postpaid,Prepaid,Payment,Network,Recharge">
+        <meta name="keywords" content="Mobile Recharge,Postpaid,Prepaid,Payment,Network,Recharge,Signup">
         <meta name="description" content="Online Mobile Recharge Portal">
         <meta name="author" content="Sloth Bear">
         <title>Online Mobile Recharge</title>
         <script type="text/javascript">
             function abc() {
-                var m = document.getElementById("mail").value;
+                var m = document.getElementById("email").value;
                 var u = document.getElementById("user").value;
                 var p = document.getElementById("pass").value;
                 var cp = document.getElementById("cpass").value;
@@ -29,11 +29,10 @@
 
                     else {
                         window.alert("..YOUR LEO ACCOUNT HAS BEEN CREATED SUCCESSFULLY !!!..");
+                        window.open("Login.html")
                     }
 
                 }
-
-
 
             }
         </script>
@@ -55,27 +54,8 @@
             }
             #top_bar
             {
-                top: 0px;
                 background-color: #ff6600;
-                font-family: "arial";
-                height: 75px;
-                text-align: right ;  
-            }
-            #top_bar a
-            {
-                height: 100%;  
-                font-family: "arial";
-                font-size: 40px;
-                color: white;
-                margin-right: 20px;
-                padding-top: 50px;
-                padding-bottom: 10px;
-                margin-top: 10px;
-                text-decoration: none;
-            }
-            #top_bar a:hover
-            {
-                background-color:black;
+                height: 50px;  
             }
             
             label
@@ -102,7 +82,7 @@
                 float: right;
                 margin-right:75px ;
             }
-            input[type=text], input[type=password] 
+            input[type=text], input[type=password],input[type=number]
             {
                border-radius:5px;
                background-color: whitesmoke;
@@ -113,21 +93,8 @@
                border: 1px solid #ccc;
                box-sizing: border-box;
             }
-            input:focus { outline:none; }
-            #remem
-            {
-                font-size: small;
-            }            
-            #fp
-            {
-                color: black;
-                text-decoration: none;
-                margin-top:0px;
-                float:right;
-            }
-            #fp:hover{
-                color:blue;
-            }
+            input:focus { outline:none; }    
+
             h1
             {
                 font-size: 45px;
@@ -148,7 +115,7 @@
                 border-radius:10px;
                 border-color: #ff6600;
                 padding:5px;
-                width:49%;
+                width:100%;
                 text-align: center;
             }
             .but:hover
@@ -158,31 +125,39 @@
             }
             #anim
             {
-                width: 650px ;
+                margin-top: 125px;
+                width: 600px ;
+            }
+            p
+            {
+                font-size:20px;
+                font-family: Manrope_M;
             }
         </style>
     </head>
     <body>
         <div id="top_bar">
-            <img src="######"  width="##" >
-            <a href="about.html">About</a>
         </div>
         <div id="main_part">
             <div id="login_form">
                 <form name="loginForm" method="post" autocomplete="on">
-                 <b>Login Form</b><br ><br >
-                 <label for="email">Username:</label><input type="text" placeholder="Email or username" id="mail"  name="email" required><br />
-                 <label for="pass">Password:</label><input type="password" name="" value="" placeholder="Password" id="pass" name="pass" required>
-                 <input type="checkbox" id="remember" name="" value="">
-                 <label id="remem" for="vehicle1">Remember me</label>
-                 <a href="forgotpassword.html" id="fp">Forgot password??</a> <br /><br />  
-                 <button type="button" onclick="abc()" class="but" id="log">Login</button>
-                 <a href="signup.html"><button type="button" class="but" id="sign">Sign Up</button></a><br />
+                 <b>Sign-Up:</b><br ><br >
+                 <label for="user">Username:</label><input type="text" placeholder="Username" id="user"  name="user" required><br />
+                 <label for="email">Email:</label><input type="text" name="" value="" placeholder="Email Address" id="email" name="mail" required>
+                 <label for="contact">Contact:</label><input type="number" placeholder="contact number"  name="contact number" id="number" required="true">
+                 <p> Gender :</p><br >
+                 <input type="radio" name="gender"value="male" ><label for="gender">Male</label>&nbsp;&nbsp;&nbsp;
+                 <input type="radio" name="gender"value="female"><label for="gender">Female</label><br />
+                 <label for="pass">Password:</label><input type="password" name="" value="" placeholder="Password" name="pass" id="pass" required="true"><br/>
+                 <label for="pass">Confirm Password:</label><input type="password" name="" value=""placeholder="Retype Your Password" name="cpass" id="cpass" required="true"><br/>
+                 <br/><br />
+                 <img src="images/hey-create.gif" style="width: 200px" alt="prompt"><br/>
+                 <button type="button" onclick="abc()"  class="but" id="sign">Create Account</button><br />
                 </form>
             </div>
             <div id="decor">
-                <h1>want to talk to your<br > loved ones?</h1>
-                 <img  id="anim" src="images/gif-mob.gif" width="##" alt="animation">
+                <h1>What are you waiting for?</h1>
+                 <img  id="anim" src="images/ghost.gif"  alt="signupanimation">
             </div>
         </div>
     </body>
