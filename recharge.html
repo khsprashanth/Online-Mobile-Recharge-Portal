@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mobile Recharge,Postpaid,Prepaid,Payment,Network,Recharge">
+    <meta name="description" content="Online Mobile Recharge Portal">
+    <meta name="author" content="Prashanth kadimisettty">
+    <title>Online Mobile Recharge</title>
+    <script type="text/javascript">
+        function hide() {
+            document.getElementById("postpaid_form").style.display = "none";
+            document.getElementById("prepaid_form").style.display = "inline";
+            document.getElementById("postimg").style.display = "none";
+            document.getElementById("prepimg").style.display = "inline";
+        }
+        function radio() {
+            var x = document.getElementById("post")
+            var pos = document.getElementById("postpaid_form")
+            var pre = document.getElementById("postpaid_form")
+            if (x.checked) {
+                document.getElementById("postimg").style.display = "inline";
+                document.getElementById("prepimg").style.display = "none";
+                document.getElementById("postpaid_form").style.display = "inline";
+                document.getElementById("prepaid_form").style.display = "none";
+            }
+            else {
+                document.getElementById("prepimg").style.display = "inline";
+                document.getElementById("postimg").style.display = "none";
+                document.getElementById("postpaid_form").style.display = "none";
+                document.getElementById("prepaid_form").style.display = "inline";
+            }
+        }
+
+
+        function abc() {
+            window.open("payment.html");
+
+        }
+    </script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        @font-face {
+            font-family: Manrope_M;
+            src: url(Manrope-Medium.ttf)
+        }
+
+        body {
+            background-color: white;
+            background-size: cover;
+        }
+
+        #top_bar {
+            background-color: #ff6600;
+            height: 50px;
+        }
+
+        p {
+            margin-left: 50px;
+            font-family: Manrope_M;
+            font-size: 40px;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: Manrope_M;
+        }
+
+        ::placeholder {
+            font-size: 20px;
+            font-family: Manrope_M;
+            color: rgb(0, 0, 0, 0.8);
+        }
+
+        input[type=number] {
+            font-size: 20px;
+            background-color: transparent;
+            width: 25%;
+            padding: 12px 20px;
+            outline: none;
+            outline-style: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: solid #ff6600 2px;
+
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+            outline: none;
+        }
+
+        select {
+            font-size: 20px;
+            border-radius: 50px;
+            background-color: transparent;
+            width: 25%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ff6600;
+            box-sizing: border-box;
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+        option {
+            font-size: 20px;
+            font-family: Manrope_M;
+            color: rgb(0, 0, 0, 0.8);
+        }
+
+        #top_form {
+            margin-top: 60px;
+            margin-left: 50px;
+        }
+
+        #prepaid_form,
+        #postpaid_form {
+            margin-left: 50px;
+        }
+
+        .but {
+            color: white;
+            font-family: Manrope_M;
+            margin-left: 50px;
+            font-size: 25px;
+            background: #ff6600;
+            border-radius: 10px;
+            border-color: #ff6600;
+            padding: 5px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .but:hover {
+            background-color: antiquewhite;
+            color: #ff6600;
+        }
+
+
+        img {
+            float: right;
+            margin-right: 200px;
+        }
+
+        #offers {
+            width: 50%;
+        }
+        #nav
+        {
+           letter-spacing:1px;
+           float:right;
+           margin-right:30px;
+           margin-top:0;
+           border:none;
+           outline:none;
+           font-family: Manrope_M;
+           font-size: 15px;
+           height: 40%;
+           padding:15px 10px;
+           border-left: solid rgb(255,255,255,0.5) 2px;
+           border-right: solid rgb(255,255,255,0.5) 2px;
+           background-color: transparent;
+           color: black;
+           text-decoration: none;
+        }
+        #nav:hover
+        {
+            color:#ff6600;
+            background-color:rgb(255,255,255,0.7);
+        }
+    </style>
+</head>
+
+<body onload='hide()'>
+    <div id="top_bar">
+        <a id="nav" href="about.html" target="_self">ABOUT</a>
+        <a id="nav" href="support.html" target="_self">SUPPORT</a>
+        <a id="nav" href="Login.html" target="_self">SIGN OUT</a>
+    </div>
+    <img src="images/prepaid.png" id="prepimg" alt="prepaid">
+    <img src="images/postpaid.png" id="postimg" alt="postpaid">
+    <p>
+        <bold>One Step Ahead to Your Goal!</bold>
+    </p>
+    <div id="top_form">
+        <label id="phone" for="phone">Contact Number:</label>
+        <input type="number" placeholder="Contact Number" id="phone_num" name="phone" required>
+        <br /><br />
+        <input type="radio" id="post" name="plans" value="postpaid" onclick="radio()"><label for="plan">Postpaid</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="prep" name="plans" value="prepaid" onclick="radio()" checked="checked"><label
+            for="plan">Prepaid</label><br />
+    </div>
+    <div id="prepaid_form">
+        <label id="operators" for="operators">Operator:</label>
+        <select id="operators" required>
+            <option value="" disabled hidden selected>Select Operator</option>
+            <option value="Jio">Jio</option>
+            <option value="Airtel">Airtel</option>
+            <option value="Idea">Idea</option>
+            <option value="Aircel">Aircel</option>
+            <option value="BSNL">BSNL</option>
+            <option value="Vodafone">Vodafone</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label id="circle" for="circle">Circle:</label>
+        <select id="circle" required>
+            <option value="" disabled hidden selected>Select Circle</option>
+            <option value="andhra_pradesh">AndhraPradesh</option>
+            <option value="telangana">Telangana</option>
+            <option value="punjab">Punjab</option>
+            <option value="kerala">Kerala</option>
+            <option value="tamil_nadu">Tamil Nadu</option>
+            <option value="karnataka">Karnataka</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="haryana">Haryana</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="new_delhi">Delhi</option>
+            <option value="maharastra">Maharastra</option>
+        </select><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label id="offers" for="offers">Plans:</label>
+        <select id="offers" required>
+            <option value="" disabled hidden selected>Select your Plan</option>
+            <option value="500">500/- unlimited talktime,unlimited messages |validity:74days</option>
+            <option value="150">150/- unlimited talktime,unlimited messages |validity:7days</option>
+            <option value="999">999/- unlimited talktime,unlimited messages |validity:91days</option>
+            <option value="16">16/- ratecutter 25ps/min |validity:28days</option>
+            <option value="11">11/- databooster 1GB |validity:NA</option>
+            <option value="49">49/- databooster 4GB |validity:NA</option>
+            <option value="99">99/- databooster 10GB |validity:NA</option>
+        </select>
+    </div>
+    <div id="postpaid_form">
+        <label id="amount" for="amount">Custom Amount:</label>
+        <input type="number" placeholder="Enter the amount" id="amount" name="amount" required><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label id="operators" for="operators">Operator:</label>
+        <select id="operators" required>
+            <option value="" disabled hidden selected>Select Operator</option>
+            <option value="Jio">Jio Postpaid</option>
+            <option value="Airtel">Airtel Postpaid</option>
+            <option value="Idea">Idea Postpaid</option>
+            <option value="Vodafone">Vodafone Postpaid</option>
+        </select>
+
+    </div>
+    <br /><br />
+    <button type="button" onclick="abc()" class="but" id="checkout">Checkout</button><br />
+</body>
+
+</html>

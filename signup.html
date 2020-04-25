@@ -1,164 +1,199 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Mobile Recharge,Postpaid,Prepaid,Payment,Network,Recharge,Signup">
-        <meta name="description" content="Online Mobile Recharge Portal">
-        <meta name="author" content="Sloth Bear">
-        <title>Online Mobile Recharge</title>
-        <script type="text/javascript">
-            function abc() {
-                var m = document.getElementById("email").value;
-                var u = document.getElementById("user").value;
-                var p = document.getElementById("pass").value;
-                var cp = document.getElementById("cpass").value;
-                var cn = document.getElementById("number").value;
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mobile Recharge,Postpaid,Prepaid,Payment,Network,Recharge,Signup">
+    <meta name="description" content="Online Mobile Recharge Portal">
+    <meta name="author" content="Sloth Bear">
+    <title>Online Mobile Recharge</title>
+    <script type="text/javascript">
+        
+        function abc() {
+            var m = document.getElementById("email").value;
+            var u = document.getElementById("user").value;
+            var p = document.getElementById("pass").value;
+            var cp = document.getElementById("cpass").value;
+            var cn = document.getElementById("number").value;
 
 
-                if (m.length == 0 || u.length == 0 || p.length == 0 || cp.length == 0 || cn.length == 0) {
+            if (m.length == 0 || u.length == 0 || p.length == 0 || cp.length == 0 || cn.length == 0) {
 
-                    window.alert("....KINDLY ENTER ALL THE REQUIRED DETAILS .... ");
+                window.alert("....KINDLY ENTER ALL THE REQUIRED DETAILS .... ");
+            }
+
+            else {
+
+                if (p != cp) {
+                    window.alert("..YOUR PASSWORDS ARE NOT MATCHED ..");
+                    window.open("signup.html");
                 }
 
                 else {
-
-                    if (p != cp) {
-                        window.alert("..YOUR PASSWORDS ARE NOT MATCHED ..");
-                        window.open("signup.html");
-                    }
-
-                    else {
-                        window.alert("..YOUR LEO ACCOUNT HAS BEEN CREATED SUCCESSFULLY !!!..");
-                        window.open("Login.html")
-                    }
-
+                    window.alert("..YOUR LEO ACCOUNT HAS BEEN CREATED SUCCESSFULLY !!!..");
+                    window.open("Login.html")
                 }
 
             }
-        </script>
-        <style>
-            *
-            {
-               padding: 0px;
-               margin: 0px;
-            }
-            @font-face
-            {
+
+        }
+    </script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        @font-face {
             font-family: Manrope_M;
             src: url(Manrope-Medium.ttf)
-            }
-            body
-            {
-              background-color: white;
-              background-size: cover;
-            }
-            #top_bar
-            {
-                background-color: #ff6600;
-                height: 50px;  
-            }
-            
-            label
-            {
-               font-size: 20px;
-               font-family: Manrope_M;
-            }
+        }
 
-            b
-            {
-                font-size: 35px;
-                letter-spacing: 0px;
-                font-family: Manrope_M;
-            }             
-            #decor
-            {
-                float: left;
-            }
-            #login_form
-            { 
-                margin-top: 70px;
-                border: 4px;
-                border-left-color: #ff6600;
-                float: right;
-                margin-right:75px ;
-            }
-            input[type=text], input[type=password],input[type=number]
-            {
-               border-radius:5px;
-               background-color: whitesmoke;
-               width: 100%;
-               padding: 12px 20px;
-               margin: 8px 0;
-               display: inline-block;
-               border: 1px solid #ccc;
-               box-sizing: border-box;
-            }
-            input:focus { outline:none; }    
+        body {
+            background-color: white;
+            background-size: cover;
+        }
 
-            h1
-            {
-                font-size: 45px;
-                margin-left: 50px;
-                font-family: Manrope_M ;
-            }
-            
-            .but #sign
-            {
-                 float:right;
-            }
-            .but 
-            {
-                color: white;
-                font-family: Manrope_M;
-                font-size: 25px;
-                background:  #ff6600;
-                border-radius:10px;
-                border-color: #ff6600;
-                padding:5px;
-                width:100%;
-                text-align: center;
-            }
-            .but:hover
-            {
-                background-color: antiquewhite;
-                color: #ff6600;
-            }
-            #anim
-            {
-                margin-top: 125px;
-                width: 600px ;
-            }
-            p
-            {
-                font-size:20px;
-                font-family: Manrope_M;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="top_bar">
+        #top_bar {
+            background-color: #ff6600;
+            height: 50px;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: Manrope_M;
+        }
+
+        b {
+            font-size: 35px;
+            letter-spacing: 0px;
+            font-family: Manrope_M;
+        }
+
+        #decor {
+            float: left;
+        }
+
+        #login_form {
+            margin-top: 70px;
+            border: 4px;
+            border-left-color: #ff6600;
+            float: right;
+            margin-right: 75px;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=number] {
+            border-radius: 5px;
+            background-color: whitesmoke;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-left: 50px;
+            font-family: Manrope_M;
+        }
+
+        .but #sign {
+            float: right;
+        }
+
+        .but {
+            color: white;
+            font-family: Manrope_M;
+            font-size: 25px;
+            background: #ff6600;
+            border-radius: 10px;
+            border-color: #ff6600;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .but:hover {
+            background-color: antiquewhite;
+            color: #ff6600;
+        }
+
+        #anim {
+            margin-top: 125px;
+            width: 600px;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: Manrope_M;
+        }
+        #nav
+        {
+           letter-spacing:1px;
+           float:right;
+           margin-right:30px;
+           margin-top:0;
+           border:none;
+           outline:none;
+           font-family: Manrope_M;
+           font-size: 15px;
+           height: 40%;
+           padding:15px 10px;
+           border-left: solid rgb(255,255,255,0.5) 2px;
+           border-right: solid rgb(255,255,255,0.5) 2px;
+           background-color: transparent;
+           color: black;
+           text-decoration: none;
+        }
+        #nav:hover
+        {
+            color:#ff6600;
+            background-color:rgb(255,255,255,0.7);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="top_bar">
+        <a id="nav" href="about.html" target="_self">ABOUT</a>
+        <a id="nav" href="support.html" target="_self">SUPPORT</a>
+    </div>
+    <div id="main_part">
+        <div id="login_form">
+            <form name="loginForm" method="post" autocomplete="on">
+                <b>Sign-Up:</b><br><br>
+                <label for="user">Username:</label><input type="text" placeholder="Username" id="user" name="user"
+                    required><br />
+                <label for="email">Email:</label><input type="text" name="" value="" placeholder="Email Address"
+                    id="email" name="mail" required>
+                <label for="contact">Contact:</label><input type="number" placeholder="contact number"
+                    name="contact number" id="number" required="true">
+                <p> Gender :</p><br>
+                <input type="radio" name="gender" value="male"><label for="gender">Male</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" value="female"><label for="gender">Female</label><br />
+                <label for="pass">Password:</label><input type="password" name="" value="" placeholder="Password"
+                    name="pass" id="pass" required="true"><br />
+                <label for="pass">Confirm Password:</label><input type="password" name="" value=""
+                    placeholder="Retype Your Password" name="cpass" id="cpass" required="true"><br />
+                <br /><br />
+                <img src="images/hey-create.gif" style="width: 200px" alt="prompt"><br />
+                <button type="button" onclick="abc()" class="but" id="sign">Create Account</button><br />
+            </form>
         </div>
-        <div id="main_part">
-            <div id="login_form">
-                <form name="loginForm" method="post" autocomplete="on">
-                 <b>Sign-Up:</b><br ><br >
-                 <label for="user">Username:</label><input type="text" placeholder="Username" id="user"  name="user" required><br />
-                 <label for="email">Email:</label><input type="text" name="" value="" placeholder="Email Address" id="email" name="mail" required>
-                 <label for="contact">Contact:</label><input type="number" placeholder="contact number"  name="contact number" id="number" required="true">
-                 <p> Gender :</p><br >
-                 <input type="radio" name="gender"value="male" ><label for="gender">Male</label>&nbsp;&nbsp;&nbsp;
-                 <input type="radio" name="gender"value="female"><label for="gender">Female</label><br />
-                 <label for="pass">Password:</label><input type="password" name="" value="" placeholder="Password" name="pass" id="pass" required="true"><br/>
-                 <label for="pass">Confirm Password:</label><input type="password" name="" value=""placeholder="Retype Your Password" name="cpass" id="cpass" required="true"><br/>
-                 <br/><br />
-                 <img src="images/hey-create.gif" style="width: 200px" alt="prompt"><br/>
-                 <button type="button" onclick="abc()"  class="but" id="sign">Create Account</button><br />
-                </form>
-            </div>
-            <div id="decor">
-                <h1>What are you waiting for?</h1>
-                 <img  id="anim" src="images/ghost.gif"  alt="signupanimation">
-            </div>
+        <div id="decor">
+            <h1>What are you waiting for?</h1>
+            <img id="anim" src="images/ghost.gif" alt="signupanimation">
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

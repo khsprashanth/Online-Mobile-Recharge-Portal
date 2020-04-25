@@ -15,7 +15,7 @@
             var dp = "Divya@19";
             if (dm == m && p == dp) {
                 window.alert("Logged in Successfully");
-                window.open("1code.html");
+                window.open("recharge.html");
             }
             else {
                 window.alert("..PLEASE KINDLY CHECK YOUR USERNAME AND PASSWORD..");
@@ -40,7 +40,9 @@
 
         #top_bar {
             background-color: #ff6600;
+            font-family: "arial";
             height:50px;
+            text-align: right;
         }
 
         label {
@@ -127,12 +129,37 @@
         #anim {
             width: 650px;
         }
+       #nav
+        {
+           letter-spacing:1px;
+           float:right;
+           margin-right:30px;
+           margin-top:0;
+           border:none;
+           outline:none;
+           font-family: Manrope_M;
+           font-size: 15px;
+           height: 40%;
+           padding:15px 10px;
+           border-left: solid rgb(255,255,255,0.5) 2px;
+           border-right: solid rgb(255,255,255,0.5) 2px;
+           background-color: transparent;
+           color: black;
+           text-decoration: none;
+        }
+        #nav:hover
+        {
+            color:#ff6600;
+            background-color:rgb(255,255,255,0.7);
+        }
         
     </style>
 </head>
 
 <body>
     <div id="top_bar">
+        <a id="nav" href="about.html" target="_self">ABOUT</a>
+        <a id="nav" href="support.html" target="_self">SUPPORT</a>
     </div>
     <div id="main_part">
         <div id="login_form">

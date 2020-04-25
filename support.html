@@ -7,6 +7,9 @@
     <meta name="description" content="Online Mobile Recharge Portal">
     <meta name="author" content="Sloth Bear">
     <script type="text/javascript">
+    function goBack() {
+              window.history.back();
+        }
       function abc() {
                 var m = document.getElementById("mail").value;
                 var u = document.getElementById("sub").value;
@@ -85,11 +88,35 @@
            background-color: antiquewhite;
            color: #ff6600;
         }
+        #nav
+        {
+           letter-spacing:1px;
+           float:right;
+           margin-right:30px;
+           margin-top:0;
+           border:none;
+           outline:none;
+           font-family: Manrope_M;
+           font-size: 15px;
+           height: 100%;
+           padding:15px 50px;
+           border-left: solid rgb(255,255,255,0.5) 2px;
+           border-right: solid rgb(255,255,255,0.5) 2px;
+           background-color: transparent;
+           color: black;
+           text-decoration: none;
+        }
+        #nav:hover
+        {
+            color:#ff6600;
+            background-color:rgb(255,255,255,0.7);
+        }
     </style>
 </head>
 
 <body>
     <div id="top_bar">
+        <button id="nav" onclick="goBack()"><b>BACK</b></button>
     </div>
     <img src="images/supportgif.gif" id="anim" alt="supportanim" >
     <div id="Form">
